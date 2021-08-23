@@ -1,0 +1,198 @@
+\newglossary{abbrev}{abs}{abo}{List of Abbreviations}
+\newglossary{symbol}{sys}{syo}{List of Symbols}
+
+%\makenoidxglossaries
+
+\makeglossaries
+
+\newglossaryentry{ci}%
+{%
+	name={CI},
+	text={CI},
+	description={Collaborative Intelligence},
+	type = {abbrev},
+	sort={c}
+}
+
+\newglossaryentry{sfu}%
+{%
+	name={SFU},
+	text={SFU},
+	description={Simon Fraser University},
+	type = {abbrev},
+	sort={s}
+}
+
+\newglossaryentry{dnn}%
+{%
+	name={DNN},
+	text={DNN},
+	description={Deep Neural Network},
+	type = {abbrev},
+	sort={d}
+}
+
+\newglossaryentry{silrtc}%
+{%
+	name={SiLRTC},
+	text={SiLRTC},
+	description={Simple Low Rank Tensor Completion},
+	type = {abbrev},
+	sort={s}
+}
+
+\newglossaryentry{halrtc}%
+{%
+	name={HaLRTC},
+	text={HaLRTC},
+	description={High accuracy Low Rank Tensor Completion},
+	type = {abbrev},
+	sort={h}
+}
+
+\newglossaryentry{altec}%
+{%
+	name={ALTeC},
+	text={ALTeC},
+	description={Adaptive Linear Tensor Completion},
+	type = {abbrev},
+	sort={a}
+}
+
+\newglossaryentry{caltec}%
+{%
+	name={CALTeC},
+	text={CALTeC},
+	description={Content Adaptive Linear Tensor Completion},
+	type = {abbrev},
+	sort={c}
+}
+
+
+\newglossaryentry{dfts}%
+{%
+	name={DFTS},
+	text={DFTS},
+	description={Deep Feature Transmission Simulator},
+	type = {abbrev},
+	sort={d}
+}
+
+\newglossaryentry{vgg16}%
+{%
+	name={VGG16},
+	text={VGG16},
+	description={VGG16 is a \glslink{cnn}{Convolutional Neural Network} architecture developed by the Visual Geometry Group at Oxford University},
+	type = {abbrev},
+	sort={v}
+}
+
+\newglossaryentry{cnn}%
+{%
+	name={CNN},
+	text={CNN},
+	description={Convolutional Neural Network, a type of \glslink{dnn}{Deep Neural Network} commonly used for computer vision tasks. Also called ConvNet},
+	type = {abbrev},
+	sort={c}
+}
+
+
+\newglossaryentry{resnet18}%
+{%
+	name={ResNet18},
+	text={ResNet18},
+	description={ResNet18 is a type of residual \glslink{dnn}{network} commonly used for computer vision tasks},
+	type = {abbrev},
+	sort={r}
+}
+
+\newglossaryentry{xtensor}%
+{%
+	name={$\mathcal{X}$},
+	text={\ensuremath{\mathcal{X}}},
+	description={Generic tensor of appropriate dimensions, usually $\mathcal{X} \in \mathbb{R}^{\gls{h} \times \gls{w} \times \#\gls{c}}$},
+	type = {symbol},
+	sort={x}
+}
+
+\newglossaryentry{xtc}%
+{%
+	name={$\hat{\mathcal{X}}$},
+	text={\ensuremath{\hat{\mathcal{X}}}},
+	description={Estimated tensor from tensor completion},
+	type = {symbol},
+	sort={x}
+}
+
+\newglossaryentry{xda}%
+{%
+	name={$\tilde{\mathcal{X}}$},
+	text={\ensuremath{\tilde{\mathcal{X}}}},
+	description={Damaged tensor of appropriate dimensions},
+	type = {symbol},
+	sort={x}
+}
+
+\newglossaryentry{c}%
+{%
+	name={$\mathbf{c}$},
+	text={\ensuremath{\mathbf{c}}},
+	description={Channel of shape $\gls{h} \times \gls{w}$ in a tensor \gls{xtensor}},
+	type = {symbol},
+	sort={c}
+}
+
+\newglossaryentry{w}%
+{%
+	name={$w$},
+	text={\ensuremath{w}},
+	description={Width of a channel \gls{c} in a tensor \gls{xtensor}},
+	type = {symbol},
+	sort={w}
+}
+
+\newglossaryentry{h}%
+{%
+	name={$h$},
+	text={\ensuremath{h}},
+	description={Height of a channel \gls{c} in a tensor \gls{xtensor}},
+	type = {symbol},
+	sort={h}
+}
+
+\newglossaryentry{pb}%
+{%
+	name={$P_B$},
+	text={\ensuremath{P_B}},
+	description={Probability of a burst of lost packets in the Gilbert-Elliott channel model},
+	type = {symbol},
+	sort={p}
+}
+
+\newglossaryentry{bl}%
+{%
+	name={$L_B$},
+	text={\ensuremath{L_B}},
+	description={Average length of a burst of lost packets in the Gilbert-Elliott channel model},
+	type = {symbol},
+	sort={b}
+}
+
+
+\newglossaryentry{pkt}%
+{%
+	name={$\mathbf{x}$},
+	text={\ensuremath{\mathbf{x}}},
+	description={Packet of shape $\gls{rpp} \times \gls{w}$ in \gls{dfts}. $\gls{pkt}_i^{(\gls{c})}$ refers to the packet with index $i$ in channel \gls{c}},
+	type = {symbol},
+	sort={p}
+}
+
+\newglossaryentry{rpp}%
+{%
+	name={$r_\text{pkt}$},
+	text={\ensuremath{r_\text{pkt}}},
+	description={Number of rows of features per packet \gls{pkt} in \gls{dfts}},
+	type = {symbol},
+	sort={r}
+}

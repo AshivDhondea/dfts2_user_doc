@@ -1,0 +1,10 @@
+\chapter{Introduction} \label{chapter:intro}
+This technical report serves as user documentation for \gls{dfts} version 2. The original \gls{dfts} was developed by Harshavardhan Unnibhavi, an intern at \gls{sfu}'s Multimedia Lab in 2018 with the objective of studying packet-based transmission of deep features over unreliable communication channels \cite{unnibhavi2018dfts}. Version 1 of \gls{dfts} (along with a test set consisting of 867 images from 10 classes of \textit{Imagenet}) can be cloned from the public repository at \url{https://github.com/SFU-Multimedia-Lab/DFTS}. A number of higher-level API calls in \textit{TensorFlow} version 2 break the operation of \gls{dfts} version 1. The motivation for upgrading \gls{dfts} was to gain compatibility with \textit{TensorFlow} version 2.
+
+\section{What can DFTS version 2 do?}
+
+\section{Overview of this document}
+\begin{itemize}
+	\item Chapter \ref{chapt:valid} discusses validation tests to verify that \gls{dfts} version 2 produces matching results to the original version.
+	\item Chapter \ref{chapt:modules} explains in full detail the operation of the key modules in \gls{dfts}.
+\end{itemize}
