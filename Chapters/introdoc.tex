@@ -1,10 +1,23 @@
 \chapter{Introduction} \label{chapter:intro}
-This technical report serves as user documentation for \gls{dfts} version 2. The original \gls{dfts} was developed by Harshavardhan Unnibhavi, an intern at \gls{sfu}'s Multimedia Lab in 2018 with the objective of studying packet-based transmission of deep features over unreliable communication channels \cite{unnibhavi2018dfts}. Version 1 of \gls{dfts} (along with a test set consisting of 867 images from 10 classes of \textit{Imagenet}) can be cloned from the public repository at \url{https://github.com/SFU-Multimedia-Lab/DFTS}. A number of higher-level API calls in \textit{TensorFlow} version 2 break the operation of \gls{dfts} version 1. The motivation for upgrading \gls{dfts} was to gain compatibility with \textit{TensorFlow} version 2.
+This technical report serves as user documentation for \gls{dfts} version 2. The original \gls{dfts}, developed by Harsha at \gls{sfu}'s Multimedia Lab in 2018, had the objective of serving as a testbed for studies in packet-based transmission of deep features over unreliable communication channels \cite{unnibhavi2018dfts}.
+
+A more sophisticated simulation framework called \gls{dfts}2, presented in \cite{DFTS2_VCIP_2021}, is now compatible with TensorFlow 2. It has the following new capabilities: additional channel models and missing feature recovery methods from the recent literature. In addition to these, it can compute additional performance metrics such as Top-5 prediction accuracy for the image classification task.
 
 \section{What can DFTS version 2 do?}
+We will use ``\gls{dfts}'' to refer to DFTS2 from this point onward. Briefly, DFTS can split a pre-trained deep model (\gls{dnn}) into a mobile sub-model and a cloud sub-model in a collaborative intelligence system. to continue.
+
+include figures.
+
+running dfts from the terminal. show code snippet and example yaml file.
+
+Broadly, there are two types of experiments possible with DFTS: single-shot or ``demo" experiments and Monte Carlo experiments. Demonstration experiments are meant to be run on a small test set to generate deep feature tensor packet visualizations whereas Monte Carlo experiments are meant to be ``full-scale" experiments run on the entire test set to compute overall statistical results. Single-shot experiments run very quickly and produce qualitative results while full-scale experiments may take hours and produce quantitative results.
+
 
 \section{Overview of this document}
 \begin{itemize}
-	\item Chapter \ref{chapt:valid} discusses validation tests to verify that \gls{dfts} version 2 produces matching results to the original version.
-	\item Chapter \ref{chapt:modules} explains in full detail the operation of the key modules in \gls{dfts}.
+	\item Chapter \ref{chapt:simdescr} describes in detail each component of \gls{dfts}.
+	\item Chapter \ref{chapt:demo} explains how to run demonstration experiments.
+	\item Chapter \ref{chapt:mc} explains how to run Monte Carlo experiments.
+	\item Chapter \ref{chapt:future} concludes this technical report and provides recommendations for future work.
 \end{itemize}
+

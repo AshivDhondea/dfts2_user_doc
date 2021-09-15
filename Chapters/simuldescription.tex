@@ -1,0 +1,26 @@
+\chapter{Simulator description}\label{chapt:simdescr}
+\section{Introduction}
+This chapter discusses in detail the different components of \gls{dfts}.
+
+\section{Intermediate feature tensor packetization} \label{sec:simdescr:pkt}
+
+
+\section{Channel models} \label{sec:simdescr:channel}
+DFTS offers three models for the communication channel model: random loss, i.e., independent and identically distributed (iid), Gilbert-Elliott and external packet traces. Technically, the perfect channel model case, that is, no packet loss at all, is also a channel model. We will next look at each channel model case.
+
+\subsection{Random loss channels}
+
+\subsection{Gilbert-Elliott channels}
+
+\subsection{Packet traces}
+
+\section{Packet loss concealment} \label{sec:simdescr:ec}
+By recovering missing packets in deep feature tensors, we are able to provide the cloud sub-model with more ``complete"" tensor data to exploit in order to complete the inference task. \gls{dfts} allows the user to switch on or off error concealment. The following packet loss concealment methods include
+\begin{itemize}
+	\item general tensor completion methods: \gls{silrtc} \cite{liu2012tensor} and \gls{halrtc} \cite{liu2012tensor}.\\
+	These methods were developed to recover missing values in visual data. They make no assumption as to the nature of the loss (in other words, they are agnostic to the chosen packetization scheme). \gls{silrtc} and \gls{halrtc} adopt an iterative approach: they have to be run a number of times on the corrupted tensor to recover the missing packets. The number of iterations to be run is a parameter for the engineer to tune.
+	\item methods which are specific to deep feature tensors in \gls{ci}: \gls{altec} \cite{Bragile2020} and \gls{caltec} \cite{CALTeC_ICIP_2021}. \\ \gls{altec} was originally developed for a single row of feature data per packet scheme. \gls{dfts} provides an \gls{altec} modified to handle a multiple rows of feature tensor data per packet scheme.
+	\item image inpainting-based methods, such as Navier-Stokes \cite{navierstokes} which has been used for error concealment in \gls{ci} in \cite{Bajic2021objdet}.
+\end{itemize}
+
+\section{Simulation mode} \label{sec:simdescr:simmode}
