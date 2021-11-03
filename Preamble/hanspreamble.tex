@@ -17,7 +17,6 @@
 % ------------------ My own stuff
 \usepackage{amsmath}
 \usepackage{amsfonts,amsthm,amssymb}
-\usepackage[dvipsnames]{xcolor}
 \usepackage{colortbl}
 \usepackage[english]{babel}
 % Fancy chapter appearance. More in fncychap.pdf
@@ -88,17 +87,7 @@
 \usepackage{url}
 \urlstyle{same}
 
-\newtheorem*{remark}{Remark}
-\theoremstyle{plain}
-\newtheorem{thm}{Theorem}[chapter] % reset theorem numbering for each chapter
-\theoremstyle{definition}
-\newtheorem{defn}[thm]{Definition} % definition numbers are dependent on theorem numbers
-\newtheorem{exmp}[thm]{Example} % same for example numbers
-\newtheorem{corollary}[thm]{Corollary}
-\newtheorem{lemma}[thm]{Lemma}
 %% 
-\usepackage{verbatim}
-\usepackage{listings}
 \usepackage{lmodern} % load a font with all the characters
 \usepackage{color}
 %-------------------------------
@@ -127,6 +116,15 @@
 
 \usepackage{fancyvrb}
 \usepackage{listings}
+\usepackage[dvipsnames]{xcolor}
+\lstset{%
+	basicstyle=\ttfamily,
+	columns=fullflexible,
+	frame=single,
+	breaklines=true,
+	breakatwhitespace=true,
+}
+
 \usepackage{verbatim}
 \usepackage[nice]{nicefrac}
 

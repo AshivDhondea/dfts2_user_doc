@@ -1,0 +1,14 @@
+Transmission:
+  channel:
+    GilbertChannel:
+      burstLength: 1
+      include: True
+      lossProbability: 0.3
+    RandomLossChannel:
+      include: false
+      lossProbability: 0
+    ExternalChannel:
+      include: False
+      trace_dir: external_traces
+  
+  
